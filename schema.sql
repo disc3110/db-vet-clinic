@@ -26,7 +26,7 @@ CREATE TABLE owners (
    );
 
    ALTER TABLE animals DROP COLUMN species;
-   ALTER TABLE animals ADD species_id int NULL;
-   ALTER TABLE animals ADD owner_id int NULL;
+   ALTER TABLE animals ADD species_id int;
+   ALTER TABLE animals ADD owner_id int;
    ALTER TABLE animals ADD CONSTRAINT animals_fk_1 FOREIGN KEY (owner_id) REFERENCES owners(id);
    ALTER TABLE animals ADD CONSTRAINT animals_fk_2 FOREIGN KEY (species_id) REFERENCES species(id); 
